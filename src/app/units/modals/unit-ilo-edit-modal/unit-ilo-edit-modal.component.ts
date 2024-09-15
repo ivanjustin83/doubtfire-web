@@ -1,20 +1,17 @@
+/* eslint-disable @angular-eslint/component-selector */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {Component, Inject, Injectable} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
+import {Component, Inject} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {LearningOutcomeService} from 'src/app/api/services/learning-outcome.service';
 import {AlertService} from 'src/app/common/services/alert.service';
+
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'unit-ilo-edit-modal',
   templateUrl: 'unit-ilo-edit-modal.component.html',
   styleUrls: ['unit-ilo-edit-modal.component.scss'],
 })
-@Injectable({
-  providedIn: 'root',
-})
 export class UnitILOEditModalComponent {
   prototypeIlo = {name: null, description: null, abbreviation: null};
-  private dialog: MatDialog;
   ilo: any;
   isNew: boolean;
 
